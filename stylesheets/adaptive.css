@@ -1,0 +1,502 @@
+@media (max-width: 1366px) {
+    .blockOne{
+        flex-direction: column;
+    }
+
+    .bOUpSideLeftBlock, .bOUpSideRightBlock{
+        width: 50vw;
+    }
+
+    .bOLeftBlockUpSide{
+        height: 50vw;
+    }
+
+    .bORunningLine, .bOElements{
+        width: 25vw;
+    }
+
+    .bOBlockElements{
+        width: 41.5%;
+    }
+
+    .bOCenterBlockElements{
+        width: 42%;
+    }
+
+    .bOCenterBlockElements > .bOBlockElement:not(:last-child){
+        margin-top: calc(2.67vw - 1.6px);
+    }
+    
+    .bOBlockElements > .bOBlockElement:not(:last-child){
+        margin-bottom: calc(2.79vw - 1px);
+    }
+
+    .bOBrick{
+        padding: 13px 0 7px;
+    }
+    
+    .bOBrick p{
+        font-size: calc(2vw + 1em);
+    }
+
+    .blockOneLeftBlock{
+        border-right: 0;
+        border-bottom: var(--border-block);
+    }
+
+    .bOCompanyName h1{
+        font-size: 24.5vw;
+        padding-bottom: 3vw;
+    }
+
+    .bOCompanyName h1:first-child{
+        margin-left: 1vw;
+    }
+
+    .bOCompanyName:hover{
+        transform: translateX(-101vw);
+    }
+
+    .blockTwo{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bTIcebergBlock{
+        height: 40vw;
+        border-right: 0;
+        border-bottom: var(--border-block);
+    }
+
+    .bTIceberg{
+        top: calc(26vw - 8px);
+        width: 100%;
+        height: 100%;
+    }
+
+    .bTIcebergBlock:hover .bTIceberg{
+        transform: translateY(-24vw);
+    }
+
+    .bTIcebergLine, .bTIcebergWaterLine{
+        height: 4vw;
+    }
+
+    .bTIcebergLineOne{
+        width: 4vw;
+        margin-left: 4vw;
+    }
+
+    .bTIcebergLineTwo{
+        width: 8vw;
+    }
+
+    .bTIcebergLineThree, .bTIcebergLineFour, .bTIcebergLineFive{
+        width: 16vw;
+    }
+
+    .bTIcebergBottom{
+        padding-bottom: 16vw;
+    }
+
+    .bTRightBlock{
+        min-width: 100%;
+        height: 75vw;
+    }
+
+    .bTRightBlockFallingI{
+        transform: translateY(-227%);
+    }
+
+    .bTFallingTUpSide{
+        height: 16vw;
+    }
+
+    .bTFallingTDownSide, .bTFallingIDownSide, .bTFallingSquaresBottomLine{
+        height: 8vw;
+    }
+
+    .bTFallingIUpSide{
+        height: 24vw;
+    }
+
+    .bTUpSideFrog{
+        width: 12.5vw;
+        height: 12.5vw;
+        margin-bottom: 6.35vw;
+    }
+
+    .bTCenterBlockStalactite, .bTCenterBlockStalagmite{
+        width: 105%;
+    }
+
+    .bTCenterBlockDownSide:hover .bTCenterBlockStalactite {
+        transform: translateY(-105%);
+    }
+
+    .bTCenterBlockDownSide:hover .bTCenterBlockStalagmite{
+        transform: translateY(105%);
+    }
+
+    .bTCenterBlockStalactite img, .bTCenterBlockStalagmite img{
+        object-fit: cover;
+    }
+
+    .bThOneBlock{
+        flex-direction: column;
+    }   
+
+    .bThOneBlockLeftSide, .bThOneBlockRightSide{
+        width: 100%;
+    }
+
+    .bThLeftSideUpSide, .bThRightSideDownSide{
+        padding: 10px 0;
+    }
+
+    .bThOneBlockLeftSide{
+        border-right: 0;
+        border-bottom: var(--border-block);
+    }
+
+    .bThRightSideUpSide{
+        display: none;
+    }
+
+    @keyframes runningBricksRight {
+        0%{
+            transform: translateX(calc(-75vw - 1.8vw - 10px));
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes runningBricksLeft {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-75vw - 1.8vw - 10px));
+        }
+    }
+
+    @keyframes frogSquare {
+        0%{ 
+            transform: scale(1,1) translateY(0); 
+        }
+        10%{
+            transform: scale(1.2,.9) translateY(0); 
+        }
+        30%{
+            transform: scale(.9,1.1) translateY(-25vw);
+        }
+        55%{
+            transform: scale(1.2,.9) translateY(0);
+        }
+        60%{
+            transform: scale(1,1) translateY(-10px); 
+        }
+        65%{
+            transform: scale(1,1) translateY(0); 
+        }
+        100%{
+            transform: scale(1,1) translateY(0); 
+        }
+    }
+    
+    @keyframes iconsSwiping {
+        0%,
+        100%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(calc(-35% - 15px));
+        }
+    }
+
+    @keyframes runningTextThirdLeftBlock {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-1140px);
+        }
+    }
+
+    @keyframes runningTextThirdRightBlock {
+        0%{
+            transform: translateX(-1930px);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .runningStroke p{
+        font-size: 3em;
+    }
+
+    .bOBlockElements > .bOBlockElement:not(:last-child) {
+        margin-bottom: calc(2.6vw - 1px);
+    }
+
+    .bTRightBlockFallingSquares{
+        display: none;
+    }
+
+    .bTRightBlockCenterBlock{
+        width: 66.666%;
+    }
+
+    .bTRightBlockIgloos{
+        width: 33.333%;
+    }
+
+    .bTIgloo{
+        width: 40%;
+    }
+
+    .bThThreeBlockDoorBlock{
+        width: 33.333%;
+    }
+
+    .bThThreeBlockDoor, .bThThreeBlockDoorHover{
+        width: 40%;
+    }
+
+    .bThThreeBlockDoorText{
+        bottom: 14.1vw;
+    }
+
+    .bThThreeBlockDoorBlock:nth-child(4){
+        display: none;
+    }
+
+    .bThRightSideDownSide p, .bThLeftSideUpSide p{
+        font-size: 3em;
+    }
+
+    .bThLeftSideStarWrapper{
+        width: 70px;
+    }
+
+    .bThLeftSideStar{
+        width: 60px;
+        height: 60px;
+    }
+
+    .bThLeftSideRectangles{
+        height: 64px;
+    }
+
+    .bTUpSideFrog{
+        margin-bottom: 8vw;
+    }
+
+    .bTRunningIcon{
+        margin-bottom: 16px;
+    }
+
+    @keyframes runningText{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-812px);
+        }
+    }
+
+    @keyframes runningTextThirdLeftBlock {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-684px);
+        }
+    }
+
+    @keyframes runningTextThirdRightBlock {
+        0%{
+            transform: translateX(-1160px);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes iconsSwiping {
+        0%,
+        100%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(calc(-48% - 15px));
+        }
+    }
+}
+
+@media (max-width: 414px) {
+
+    .bOBrick{
+        padding: 10px 0 5px;
+    }
+
+    .blockTwo{
+        height: 200vw;
+    }
+
+    .bTIcebergBlock{
+        height: 25%;
+    }
+
+    .bTIceberg{
+        top: calc(36vw - 8px);
+    }
+
+    .bTRightBlock{
+        flex-direction: column;
+        height: 75%;
+    }
+
+    .bTRightBlockCenterBlock{
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        border-right: 0;
+        border-bottom: var(--border-block);
+    }
+
+    .bTCenterBlockUpSide{
+        height: 70%;
+    }
+
+    .bTUpSideFrog{
+        width: 16vw;
+        height: 16vw;
+        margin-bottom: 12vw;
+    }
+    
+    .bTCenterBlockDownSide{
+        height: 30%;
+    }
+
+    .bTRightBlockIgloos{
+        width: 100%;
+        height: 15%;
+        flex-direction: row;
+    }
+
+    .bTIgloo{
+        width: 15%;
+    }
+
+    .bTIgloo:hover{
+        width: 20%;
+    }
+
+    .bThLeftSideDownSide{
+        flex-direction: column;
+    }
+
+    .bThLeftSideStars{
+        width: 100%;
+        border-bottom: var(--border-block);
+    }
+
+    .bThLeftSideStarWrapper{
+        width: 33.333vw;
+        height: 33.333vw;
+    }
+
+    .bThLeftSideStarWrapper:last-child{
+        border-right: 0;
+    }
+
+    .bThLeftSideStar{
+        width: 80px;
+        height: 80px;
+    }
+        
+    .bThThreeBlock{
+        height: 50vw;
+    }
+
+    .bThThreeBlockDoor, .bThThreeBlockDoorHover{
+        width: 50%;
+    }
+    
+    .bThThreeBlockDoorText{
+        top: 19.5vw;
+        bottom: 0;
+    }
+
+    .bThThreeBlockDoorText h2{
+        font-size: 4vw;
+    }
+    
+    .bThThreeBlockDoorBlock{
+        width: 50%;
+        height: 50vw;
+    }
+
+    .bThThreeBlockDoorBlock:nth-child(3){
+        display: none;
+    }
+
+    .bThTwoBlock{
+        height: 20vw;
+    }
+
+    footer{
+        height: 20vw;
+    }
+
+    footer h2{
+        font-size: calc(3vw + 4px);
+    }
+    
+    .footerWaveOne, .footerWaveTwo{
+        top: 13vw;
+    }
+
+    @keyframes iconsSwiping {
+        0%,
+        100%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(calc(-44% - 15px));
+        }
+    }
+
+    @keyframes frogSquare {
+        0%{ 
+            transform: scale(1,1) translateY(0); 
+        }
+        10%{
+            transform: scale(1.2,.9) translateY(0); 
+        }
+        30%{
+            transform: scale(.9,1.1) translateY(-45vw);
+        }
+        55%{
+            transform: scale(1.2,.9) translateY(0);
+        }
+        60%{
+            transform: scale(1,1) translateY(-10px); 
+        }
+        65%{
+            transform: scale(1,1) translateY(0); 
+        }
+        100%{
+            transform: scale(1,1) translateY(0); 
+        }
+    }
+    
+}

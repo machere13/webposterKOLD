@@ -1,0 +1,20 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_440_61)">
+<path d="M80 180H40V260H80V180Z" fill="#00FA9A"/>
+<path d="M120 100H80V180H120V100Z" fill="#00FA9A"/>
+<path d="M160 60H120V100H160V60Z" fill="#00FA9A"/>
+<path d="M200 180H160V260H200V180Z" fill="#00FA9A"/>
+<path d="M200 20H160V60H200V20Z" fill="#00FA9A"/>
+<path d="M280 100H240V180H280V100Z" fill="#00FA9A"/>
+<path d="M240 60H200V100H240V60Z" fill="#00FA9A"/>
+<path d="M240 300H120V340H240V300Z" fill="#00FA9A"/>
+<path d="M280 260H240V300H280V260Z" fill="#00FA9A"/>
+<path d="M120 260H80V300H120V260Z" fill="#00FA9A"/>
+<path d="M320 180H280V260H320V180Z" fill="#00FA9A"/>
+</g>
+<defs>
+<clipPath id="clip0_440_61">
+<rect width="280" height="320" fill="white" transform="translate(40 20)"/>
+</clipPath>
+</defs>
+</svg>

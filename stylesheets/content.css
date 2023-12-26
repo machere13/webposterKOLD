@@ -1,0 +1,973 @@
+:root{
+    --kold-green: #00FA9A;
+    --kold-blue: #0000CD;
+    --border-block: calc(.3vw + 5px) solid #00001A;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+*{
+    box-sizing: content-box;
+    position: relative;
+    cursor: url('../images/cursor.png'), pointer;
+}
+
+html, body{
+    background: #000;
+    width: 100%;
+}
+
+p, h1, h2, img{
+    pointer-events: none;
+    user-select: none;
+}
+
+h1{
+    font-family: 'KOLD', sans-serif;
+    text-transform: uppercase;
+}
+
+h2{
+    font-family: 'Fixedsys', sans-serif;
+}
+
+p{
+    font-family: 'ZNVT14', sans-serif;
+}
+
+.runningStroke{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0 6px;
+    border-bottom: var(--border-block);
+}
+
+.runningStroke p{
+    font-size: 5em;
+    color: var(--kold-blue);
+    animation: runningText 3s infinite linear;
+}
+
+.runningStroke:hover{
+    background-color: var(--kold-blue);
+}
+
+.runningStroke:hover p{
+    color: var(--kold-green);
+    animation-play-state: paused;
+}
+
+.blockOne{
+    display: flex;
+    width: 100%;
+    border-bottom: var(--border-block);
+}
+
+.blockOneLeftBlock{
+    display: flex;
+    flex-direction: column;
+    border-right: var(--border-block);
+}
+
+.bOLeftBlockUpSide{
+    display: flex;
+    height: 320px;
+    border-bottom: var(--border-block);
+}
+
+.bOUpSideLeftBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 100%;
+    border-right: var(--border-block);
+}
+
+.bOTwoRectangles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.bOBigRectangle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background: var(--kold-green);
+    animation: rotateBigRectangle 3s infinite linear;
+}
+
+.bOSmallRectangle{
+    width: 25%;
+    height: 25%;
+    background: #000;
+    animation: rotateSmallRectangle 1.5s infinite linear;
+}
+
+.bOBigRectangle:hover{
+    animation: rotateBigRectangle 3s infinite linear, blinkBigRectangle .5s infinite ease-in-out;
+}
+
+.bOBigRectangle:hover .bOSmallRectangle{
+    animation: rotateSmallRectangle 1.5s infinite linear, changeColorSizingSmallRectangle .5s infinite linear;
+}
+
+.bORunningLine, .bOElements{
+    width: 160px;
+    height: 100%;
+}
+
+.bORunningLine{
+    display: flex;
+    align-items: center;
+    border-right: var(--border-block);
+    overflow: hidden;
+}
+
+.bORunningLine img{
+    position: absolute;
+    width: 100%;
+    animation: runningLine .7s infinite ease-in-out;
+}
+
+.bORunningLine:hover img{
+    animation-play-state: paused;
+    background: var(--kold-blue);
+}
+
+.bOUpSideRightBlock{
+    display: flex;
+}
+
+.bOElements{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bOLeftRightBlocksElements{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.bOBlockElements{
+    display: flex;
+    flex-direction: column;
+    width: 41%;
+}
+
+.bOCenterBlockElements{
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 40.8%;
+    height: 100%;
+}
+
+.bOCenterBlockElements > .bOBlockElement:not(:last-child){
+    margin-top: 15px;
+}
+
+.bOBlockElements > .bOBlockElement:not(:last-child){
+    margin-bottom: 14.8px;
+}
+
+.bOBlockElement > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bOBlockElement{
+    transition: opacity .3s;
+}
+
+.z9LR1{
+    z-index: 9;
+}
+
+.z7LR2{
+    z-index: 7;
+}
+
+.z5LR3{
+    z-index: 5;
+}
+
+.z3LR4{
+    z-index: 3;
+}
+
+.z8C1{
+    z-index: 8;
+}
+
+.z6C2{
+    z-index: 6;
+}
+
+.z4C3{
+    z-index: 4;
+}
+
+.z2C4{
+    z-index: 2;
+}
+
+.bOBlockElement:hover{
+    opacity: 0;
+}
+
+.bOBricks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bOFirstBrickLine, .bOSecondBrickLine{
+    display: flex;
+}
+
+.bOFirstBrickLine{
+    margin-bottom: calc(.3vw + 5px);
+    animation: runningBricksRight 2.5s linear infinite;
+}
+
+.bOSecondBrickLine{
+    animation: runningBricksLeft 2.5s linear infinite;
+}
+
+.bOFirstBrickLine:hover, .bOSecondBrickLine:hover{
+    animation-play-state: paused;
+}
+
+.bOBrick{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25%;
+    height: 100%;
+    padding: 8px 0 7px;
+    margin-right: calc(.3vw + 5px);
+    background: var(--kold-blue);
+    transition: background, min-width .5s;
+}
+
+.bOBrick:hover{
+    background: var(--kold-green);
+    min-width: 40%;
+    animation: hundredPercentStatement 2s 1 linear;
+}
+
+.bOBrick p{
+    color: var(--kold-green);
+    font-size: 2em;
+    text-transform: uppercase;
+    transition: color .5s;
+}
+
+.bOBrick:hover p{
+    color: var(--kold-blue);
+}
+
+.blockOneRightBlock{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bOCompanyName{
+    display: flex;
+    transition: 1s;
+}
+
+.bOCompanyName h1{
+    transition: 1s;
+    font-size: 23.4rem;
+    padding-top: 8px;
+}
+
+.bOCompanyName h1:first-child{
+    color: var(--kold-green);
+    margin-left: 30px;
+}
+
+.bOCompanyName h1:last-child{
+    color: var(--kold-blue);
+}
+
+.bOCompanyName:hover h1:first-child{
+    color: #000;
+}
+
+.bOCompanyName:hover h1:last-child{
+    color: var(--kold-green);
+}
+
+.bOCompanyName:hover{
+    transform: translateX(-24%);
+    background: var(--kold-blue);
+}
+
+.blockTwo{
+    display: flex;
+    width: 100%;
+    height: 640px;
+    border-bottom: var(--border-block);
+}
+
+.bTIcebergBlock{
+    width: 100%;
+    border-right: var(--border-block);
+    overflow: hidden;
+    transition: transform 1s;
+}
+
+.bTIceberg{
+    position: absolute;
+    top: 485px;
+    width: 100%;
+    transition: transform 1s;
+}
+
+.bTIcebergBlock:hover .bTIceberg{
+    transform: translateY(-300px);
+}
+
+.bTIcebergTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bTIcebergLine{
+    height: 40px;
+    background: var(--kold-green);
+}
+
+.bTIcebergLineOne{
+    width: 40px;
+    margin-left: 40px;
+}
+
+.bTIcebergLineTwo{
+    width: 80px;
+}
+
+.bTIcebergLineThree, .bTIcebergLineFour, .bTIcebergLineFive{
+    width: 160px;
+}
+
+.bTIcebergWaterLine{
+    height: 40px;
+    width: 100%;
+    background: var(--kold-blue);
+}
+
+.bTIcebergBottom{
+    background: var(--kold-blue);
+    padding-bottom: 96px;
+}
+
+.bTIcebergDeep{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    filter: blur(12px);
+}
+
+.bTRightBlock{
+    display: flex;
+    overflow: hidden;
+    min-width: 960px;
+}
+
+.bTRightBlockFallingSquares, .bTRightBlockCenterBlock{
+    border-right: var(--border-block);
+}
+
+.bTRightBlockFallingSquares{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.bTRightBlockFallings{
+    display: flex;
+    align-items: end;
+}
+
+.bTRightBlockFallingT{
+    width: 66.666%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    animation: fallingT 3s 1 linear paused;
+}
+
+.bTFallingTUpSide{
+    width: 50%;
+    height: 140px;
+    background: var(--kold-green);
+}
+
+.bTFallingTDownSide{
+    width: 100%;
+    height: 70px;
+    background: var(--kold-green);
+    animation: changeColorFalling .75s 1 forwards 4s linear paused;
+}
+
+.bTRightBlockFallingI{
+    width: 33.333%;
+    animation: fallingI 3s 1 forwards 1s linear paused;
+    transform: translateY(-570px);
+}
+
+.bTFallingIUpSide{
+    width: 100%;
+    height: 210px;
+    background: var(--kold-green);
+}
+
+.bTFallingIDownSide{
+    width: 100%;
+    height: 70px;
+    background: var(--kold-green);
+    animation: changeColorFalling .75s 1 forwards 4s linear paused;
+}
+
+.bTRightBlockFallingSquares:hover .bTRightBlockFallingT, .bTRightBlockFallingSquares:hover .bTRightBlockFallingI, .bTRightBlockFallingSquares:hover .bTFallingTDownSide, .bTRightBlockFallingSquares:hover .bTFallingIDownSide{
+    animation-play-state: running;
+}
+
+.bTFallingSquaresBottomLine{
+    width: 100%;
+    height: 70px;
+    background: var(--kold-blue);
+}
+
+.bTRightBlockCenterBlock{
+    width: 50%;
+}
+
+.bTCenterBlockUpSide{
+    display: flex;
+    width: 100%;
+    height: 70%;    
+    border-bottom: var(--border-block);
+    overflow: hidden;
+}
+
+.bTUpSideFrogSquare{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-right: var(--border-block);
+    overflow: hidden;
+    transition: background .5s;
+}
+
+.bTUpSideFrog{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 58px;
+    background: var(--kold-blue);
+    animation: frogSquare 2s infinite cubic-bezier(.1, .2, .3, 1);
+    transition: background .5s;
+}
+
+.bTUpSideFrogSquare:hover{
+    background: var(--kold-blue);
+}
+
+.bTUpSideFrogSquare:hover .bTUpSideFrog{
+    animation-play-state: paused;
+    background: var(--kold-green);
+}
+
+.bTUpSideFrogSquareBed{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.bTUpSideFrogSquareBed img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bTUpSideRunningIcons{
+    width: 50%;
+    transition: background .3s;
+}
+
+.bTUpSideRunningIcons:hover{
+    background: var(--kold-blue);
+}
+
+.bTRunningIconsLine{
+    animation: iconsSwiping 3s infinite ease-in-out;
+}
+
+.bTUpSideRunningIcons:hover .bTRunningIconsLine{
+    animation-play-state: paused;
+}
+
+.bTRunningIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.bTRunningIcon img{
+    width: 75%;
+    height: 75%;
+    transition: .5s;
+}
+
+.bTRunningIcon:hover img{
+    width: 90%;
+    height: 90%;
+}
+
+.bTCenterBlockDownSide{
+    width: 100%;
+    height: calc(30% - .3vw - 5px);
+    overflow: hidden;
+}
+
+.bTCenterBlockDownSideWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bTCenterBlockStalactite, .bTCenterBlockStalagmite{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    z-index: 1;
+    filter: drop-shadow(0 0 24px #000);
+    transition: transform .75s;
+}
+
+.bTCenterBlockStalactite img, .bTCenterBlockStalagmite img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bTCenterBlockDownSide:hover .bTCenterBlockStalactite{
+    transform: translateY(-100px);
+}
+
+.bTCenterBlockDownSide:hover .bTCenterBlockStalagmite{
+    transform: translateY(100px);
+}
+
+.bTCenterBlockEyes{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    top: calc(50% - 2.5vw - 25px);
+    width: 100%;
+}
+
+.bTCenterBlockEyeImage{
+    width: calc(5vw + 50px);
+    height: calc(5vw + 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bTCenterBlockEyeImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.bTCenterBlockEyeball{
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: var(--kold-green);
+    animation: eyeLight 2s infinite linear;
+}
+
+.bTRightBlockIgloos{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bTIgloo{
+    width: 50%;
+    transition: width .5s;
+}
+
+.bTIgloo:hover{
+    width: 75%;
+}
+
+.bTIgloo:nth-child(1), .bTIgloo:nth-child(3), .bTIgloo:nth-child(5){
+    animation: iglooOneShaking .5s infinite linear;
+}
+
+.bTIgloo:nth-child(2), .bTIgloo:nth-child(4){
+    animation: iglooTwoShaking .5s infinite linear;
+}
+
+.bThOneBlock{
+    display: flex;
+    border-bottom: var(--border-block);
+    overflow: hidden;
+}
+
+.bThOneBlockLeftSide{
+    width: 50%;
+    border-right: var(--border-block);
+}
+
+.bThLeftSideUpSide{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0 6px;
+    border-bottom: var(--border-block);
+    transition: .75s;
+}
+
+.bThLeftSideUpSide p{
+    font-size: 5em;
+    color: var(--kold-green);
+    animation: runningTextThirdLeftBlock 3s infinite linear;
+    transition: .75s;
+}
+
+.bThLeftSideUpSide:hover{
+    background: var(--kold-green);
+}
+
+.bThLeftSideUpSide:hover p{
+    color: var(--kold-blue);
+    text-shadow: calc(.25vw + 3px) calc(.25vw + 3px) 0 #000;
+}
+
+.bThLeftSideDownSide{
+    width: 100%;
+    display: flex;
+}
+
+.bThLeftSideStars{
+    display: flex;
+}
+
+.bThLeftSideStarWrapper{
+    width: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: var(--border-block);
+    transition: background .3s;
+}
+
+.bThLeftSideStar{
+    width: 80px;
+    height: 80px;
+    background: url('../images/stars.svg');
+    background-position: center;
+    background-size: 300%;
+
+}
+
+.bThLeftSideStarWrapper:nth-child(1) .bThLeftSideStar{
+    animation: starChangingOne 1s steps(1) infinite;
+}
+
+.bThLeftSideStarWrapper:nth-child(2) .bThLeftSideStar{
+    background-position: 50%;
+    animation: starChangingTwo 1s steps(1) infinite;
+}
+
+.bThLeftSideStarWrapper:nth-child(3) .bThLeftSideStar{
+    background-position: 100%;
+    animation: starChangingThree 1s steps(1) infinite;
+}
+
+.bThLeftSideStarWrapper:nth-child(1):hover .bThLeftSideStar{
+    animation: starChangingOne .25s steps(1) infinite;
+}
+
+.bThLeftSideStarWrapper:nth-child(2):hover .bThLeftSideStar{
+    animation: starChangingTwo .25s steps(1) infinite;
+}
+
+.bThLeftSideStarWrapper:nth-child(3):hover .bThLeftSideStar{
+    animation: starChangingThree .25s steps(1) infinite;
+}
+
+.bThLeftSideStarWrapper:nth-child(1):hover, .bThLeftSideStarWrapper:nth-child(2):hover, .bThLeftSideStarWrapper:nth-child(3):hover{
+    background: var(--kold-blue);
+}
+
+.bThLeftSideRectangles{
+    width: 100%;
+    height: 96px;
+}
+
+.bThLeftSideRectangle{
+    width: 25%;
+    height: 25%;
+    background: var(--kold-blue);
+    transition: background .5s;
+}
+
+.bThLeftSideRectangle:hover{
+    background: var(--kold-green);
+}
+
+.bThLeftSideRectangle:nth-child(1){
+    animation: oneRectangleShift 2s infinite ease-in-out;
+}
+
+.bThLeftSideRectangle:nth-child(2){
+    margin-left: 25%;
+    animation: twoRectangleShift 2s infinite ease-in-out;
+}
+
+.bThLeftSideRectangle:nth-child(3){
+    margin-left: 50%;
+    animation: threeRectangleShift 2s infinite ease-in-out;
+}
+
+.bThLeftSideRectangle:nth-child(4){
+    margin-left: 75%;
+    animation: fourRectangleShift 2s infinite ease-in-out;
+}
+
+.bThOneBlockRightSide{
+    width: 50%;
+}
+
+.bThRightSideUpSide{
+    width: 100%;
+    overflow: hidden;
+    height: 96px;
+    border-bottom: var(--border-block);
+}
+
+.bThRightSideRunningArrows{
+    width: 120%;
+    height: 100%;
+    animation: runningArrows .5s infinite ease-in-out;
+}
+
+.bThRightSideRunningArrows img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bThRightSideDownSide{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0 6px;
+    transition: background .75s;
+}
+
+.bThRightSideDownSide p{
+    font-size: 5em;
+    color: var(--kold-green);
+    animation: runningTextThirdRightBlock 4.5s infinite linear;
+    transition: text-shadow .75s;
+}
+
+.bThRightSideDownSide:hover{
+    background: var(--kold-blue);
+}
+
+.bThRightSideDownSide:hover p{
+    text-shadow: calc(-.25vw - 3px) calc(.25vw + 3px) 0 #000;
+}
+
+.bThTwoBlock{
+    width: 100%;
+    height: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--border-block);
+    overflow: hidden;
+}
+
+.bThTwoBlockStar{
+    width: 5vw;
+    position: absolute;
+    animation: starFlickering 1s infinite linear;
+}
+
+.bThTwoBlockStar img{
+    width: 100%;
+}
+
+.bThTwoBlockStar:nth-child(2){
+    left: calc(30% - 200px);
+    top: 15%;
+    animation-delay: .5s;
+}
+
+.bThTwoBlockStar:nth-child(3){
+    left: calc(39% - 125px);
+    top: 40%;
+    animation-delay: .3s;
+}
+
+.bThTwoBlockStar:nth-child(4){
+    left: 41%;
+    top: 15%;
+    animation-delay: .7s;
+}
+
+.bThTwoBlockStar:nth-child(5){
+    right: calc(47% - 100px);
+    top: 25%;
+    animation-delay: .2s;
+}
+
+.bThTwoBlockStar:nth-child(6){
+    right: calc(40% - 150px);
+    top: 10%;
+}
+
+.bThTwoBlockStar:nth-child(7){
+    right: calc(25% - 75px);
+    top: 50%;
+    animation-delay: 1s;
+}
+
+.bThTwoBlockText h2{
+    color: var(--kold-blue);
+    text-transform: uppercase;
+    font-size: calc(5vw + 15px);
+    animation: textUpDown 1s infinite ease-in-out;
+}
+
+.bThThreeBlock{
+    display: flex;
+    width: 100%;
+    height: 25vw;
+    border-bottom: var(--border-block);
+}
+
+.bThThreeBlockDoorBlock{
+    width: 25%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.bThThreeBlockDoorBlock:not(:last-child){
+    border-right: var(--border-block);
+}
+
+.bThThreeBlockDoor{
+    position: absolute;
+    width: 50%;
+    transition: opacity .75s;
+}
+
+.bThThreeBlockDoorHover{
+    position: absolute;
+    width: 50%;
+    opacity: 0;
+    transition: opacity .75s;
+}
+
+.bThThreeBlockDoorText{
+    position: absolute;
+    bottom: 13.1vw;
+    transition: opacity .75s;
+}
+
+.bThThreeBlockDoorText h2{
+    color: var(--kold-green);
+    font-size: 2vw;
+}
+
+.bThThreeBlockDoorBlock:hover .bThThreeBlockDoor{
+    opacity: 0;
+}
+
+.bThThreeBlockDoorBlock:hover .bThThreeBlockDoorText{
+    opacity: 0;
+}
+
+.bThThreeBlockDoorBlock:hover .bThThreeBlockDoorHover{
+    opacity: 1;
+}
+
+.bThThreeBlockDoorBlock img{
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    height: 13vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+footer h2{
+    transition: 1s;
+    font-size: calc(3vw + 8px);
+    color: var(--kold-green);
+}
+
+footer:hover h2{
+    text-shadow: -.3vw .3vw 0px var(--kold-blue);
+    transform: translate3d(.3vw, -.3vw, 0);
+}
+
+.footerWaveOne, .footerWaveTwo{
+    width: 120%;
+    position: absolute;
+    top: 9vw;
+    bottom: 0;
+}
+
+footer img{
+    width: 100%;
+}
+
+.footerWaveOne{
+    animation: wavingOne 2.5s infinite ease-in-out;
+}
+
+.footerWaveTwo{
+    margin-left: 13.25%;
+    opacity: .5;
+    animation: wavingTwo 1.5s infinite ease-in-out;
+}

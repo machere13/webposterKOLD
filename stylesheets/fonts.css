@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'ZNVT14';
+    src: url("../fonts/ZNVT14.otf") format("opentype");
+    src: url("../fonts/ZNVT14.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+} 
+
+@font-face {
+    font-family: 'KOLD';
+    src: url("../fonts/KOLD.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Fixedsys';
+    src: url("../fonts/Fixedsys.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}

@@ -1,0 +1,328 @@
+@keyframes runningText{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1352px);
+    }
+}
+
+@keyframes rotateBigRectangle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateSmallRectangle{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes blinkBigRectangle {
+    0%,
+    100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .5;
+    }
+}
+
+@keyframes changeColorSizingSmallRectangle{
+    0%,
+    100%{
+        background: #000;
+    }
+    50%{
+        background: var(--kold-blue);
+        width: 35%;
+        height: 35%;
+    }
+}
+
+@keyframes runningLine{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-16%);
+    }
+}
+
+@keyframes runningBricksRight {
+    0%{
+        transform: translateX(calc(-464px - 1.8vw - 30px));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes runningBricksLeft {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-464px - 1.8vw - 30px));
+    }
+}
+
+@keyframes hundredPercentStatement {
+    0%{}
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes runningTextThirdLeftBlock {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-1142px);
+    }
+}
+
+@keyframes fallingT {
+    0%{
+        transform: translateY(-300%);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fallingI {
+    0%{
+        transform: translateY(-227%);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes changeColorFalling {
+    0%{
+        background: var(--kold-green);
+    }
+    100%{
+        background: var(--kold-blue);
+    }
+}
+
+@keyframes frogSquare {
+    0%{ 
+        transform: scale(1,1) translateY(0); 
+    }
+    10%{
+        transform: scale(1.2,.9) translateY(0); 
+    }
+    30%{
+        transform: scale(.9,1.1) translateY(-185%);
+    }
+    55%{
+        transform: scale(1.2,.9) translateY(0);
+    }
+    60%{
+        transform: scale(1,1) translateY(-10px); 
+    }
+    65%{
+        transform: scale(1,1) translateY(0); 
+    }
+    100%{
+        transform: scale(1,1) translateY(0); 
+    }
+}
+
+@keyframes iconsSwiping {
+    0%,
+    100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-340px);
+    }
+}
+
+@keyframes eyeLight {
+    0%{
+        transform: rotate(0deg);
+        filter: blur(4px);
+    }
+    50%{
+        width: 10%;
+        height: 10%;
+        filter: blur(0px);
+    }
+    100%{
+        transform: rotate(360deg);
+        filter: blur(4px);
+    }
+}
+
+@keyframes iglooOneShaking {
+    0%,
+    100%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(5deg)
+    }
+}
+
+@keyframes iglooTwoShaking {
+    0%,
+    100%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg)
+    }
+}
+
+@keyframes starChangingOne {
+    0%,
+    100%{
+        background-position: 0%;
+    }
+    33%{
+        background-position: 50%;
+    }
+    66%{
+        background-position: 100%;
+    }
+}
+
+@keyframes starChangingTwo {
+    0%,
+    100%{
+        background-position: 50%;
+    }
+    33%{
+        background-position: 100%;
+    }
+    66%{
+        background-position: 0%;
+    }
+}
+
+@keyframes starChangingThree {
+    0%,
+    100%{
+        background-position: 100%;
+    }
+    33%{
+        background-position: 0%;
+    }
+    66%{
+        background-position: 50%;
+    }
+}
+
+@keyframes oneRectangleShift {
+    0%,
+    100%{
+        transform: translateY(0px); 
+    }
+    50%{
+        transform: translateY(300%); 
+    }
+}
+
+@keyframes twoRectangleShift {
+    0%,
+    100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+}
+
+@keyframes threeRectangleShift {
+    0%,
+    100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes fourRectangleShift {
+    0%,
+    100%{
+        transform: translateY(0px); 
+    }
+    50%{
+        transform: translateY(-300%); 
+    }
+}
+
+@keyframes runningArrows {
+    0%{
+        transform: translateX(-78px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes runningTextThirdRightBlock {
+    0%{
+        transform: translateX(-1933px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes starFlickering {
+    0%,
+    100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .3;
+        filter: blur(4px);
+    }
+}
+
+@keyframes textUpDown {
+    0%,
+    100%{
+        transform: translateY(3px);
+    }
+    50%{
+        transform: translateY(-3px);
+        text-shadow: 0 3px 0px var(--kold-green);
+        filter: drop-shadow(0 0 24px var(--kold-blue)) blur(1px);
+    }
+}
+
+@keyframes wavingOne {
+    0%,
+    100% {
+      transform: translate3d(0, -3vw, 0);
+    }
+    50% {
+      transform: translate3d(3vw, 1.5vw, 0);
+    }
+}
+
+@keyframes wavingTwo {
+    0%,
+    100% {
+      transform: translate3d(0, -3vw, 0);
+    }
+    50% {
+      transform: translate3d(3vw, 1.5vw, 0);
+    }
+}
